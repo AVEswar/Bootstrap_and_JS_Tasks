@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task-2</title>
+</head>
+<body>
+    <h1>String in Alphabetical Order</h1>
+    <label for="str">Enter String: </label>
+    <input type="text" name="str" id="str">
+    <br><br>
+    <button onclick="sort()">Submit</button>
+    <br>
+    <b>Result: </b><span id="result"></span>
+
+    <script>
+        function sort(){
+        var str = document.getElementById("str").value;
+        // console.log(ord);
+        document.getElementById('result').textContent=str.split('').sort().join('');
+        }
+    </script>
+</body>
+</html>

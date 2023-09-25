@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task-3</title>
+</head>
+<body>
+    <div style="text-align: center; justify-content: center; border: 2px black solid; padding-top: 25px">
+        <label for="first">1st Number: </label>
+        <input type="number" id="first" class="first"><br><br>
+        <label for="second">2nd Number: </label>
+        <input type="number" id="second" class="second"><br><br>
+        <button onclick="mul()">Multiply</button>
+        <button onclick="div()">Divide</button>
+
+        <p>The Result Is: </p>
+        <p id="result"></p>
+    </div>
+    <script>
+        
+        function mul(){
+            var num1 = parseInt(document.getElementById("first").value);
+            var num2 = parseInt(document.getElementById("second").value);
+            document.getElementById("result").innerHTML= num1+" x "+num2+" = "+num1*num2;
+        }
+
+        function div(){
+        var num1 = parseInt(document.getElementById("first").value);
+        var num2 = parseInt(document.getElementById("second").value);
+        if(num2!=0){
+        document.getElementById("result").innerHTML = num1+" / "+num2+" = "+num1/num2;}
+        else{
+            document.getElementById("result").innerHTML= "Divede by zero is not possible"
+        }
+        }
+    </script>
+</body>
+</html>
